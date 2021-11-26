@@ -1,0 +1,22 @@
+<h1 id="tableLabel"></h1>
+
+<p *ngIf="!activites"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="activites">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Activity</th>
+      <th>Experince</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let actv of activites">
+      <td>{{ act.firstName }}{{act.lastName}}</td>
+      <td>{{ act.email }}</td>
+      <td>{{ act.activityName }}</td>
+      <td>{{ act.experince }}</td>
+    </tr>
+  </tbody>
+</table>

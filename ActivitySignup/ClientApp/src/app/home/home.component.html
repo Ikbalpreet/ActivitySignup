@@ -1,0 +1,77 @@
+<div class="container">
+    <h1>Sign Up</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" [(ngModel)]="model.firstName"
+               required name="firstName" #firstName="ngModel" />
+        <div [hidden]="firstName.valid || firstName.pristine"
+             class="alert alert-danger">
+          First Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" [(ngModel)]="model.lastName"
+               required name="lastName" #lastName="ngModel" />
+        <div [hidden]="lastName.valid || lastName.pristine"
+             class="alert alert-danger">
+          Last Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" [(ngModel)]="model.email"
+               required name="email" #email="ngModel" />
+        <div [hidden]="email.valid || email.pristine"
+             class="alert alert-danger">
+          Email is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input type="text" class="form-control" id="startDate" [(ngModel)]="model.startDate"
+               required name="startDate" #startDate="ngModel" />
+        <div [hidden]="startDate.valid || startDate.pristine"
+             class="alert alert-danger">
+          Start Date is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="experince">Experince</label>
+        <input type="text" class="form-control" id="experince" [(ngModel)]="model.experince"
+               required name="experince" #experince="ngModel" />
+        <div [hidden]="experince.valid || experince.pristine"
+             class="alert alert-danger">
+          Experince is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="activityName">Activity Name</label>
+        <input type="text" class="form-control" id="activityName" [(ngModel)]="model.activityName"
+               required name="activityName" #activityName="ngModel" />
+        <div [hidden]="activityName.valid || activityName.pristine"
+             class="alert alert-danger">
+          Activity is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea type="text" class="form-control" id="comments" rows="5" [(ngModel)]="model.comments" name="comments" style="resize:both"></textarea>
+      </div>
+
+      <div>
+        <button type="submit" class="btn btn-success" >Sign Up</button>
+      </div><br /><br />
+    </form>
+  </div>
+
+
+
+
